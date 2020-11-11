@@ -24,8 +24,7 @@ def consolidate_cart(cart)
       if i[:item] == item_name
         i[:item][:count] += 1 
       end
-      i[:item][:count] = 1 
-      final_cart << i
+      
     end
   final_cart
 end
