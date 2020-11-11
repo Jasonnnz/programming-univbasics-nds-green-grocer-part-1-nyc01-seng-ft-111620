@@ -31,6 +31,7 @@ def consolidate_cart(cart)
       item_hash[:count] = 1 
       final_cart << item_hash
     end
+  end
   final_cart
 end
 
