@@ -18,13 +18,14 @@ def consolidate_cart(cart)
   final_cart = []
   
   cart.each do |item_hash|
-    item_name = item_hash.keys[0]
-    if final_cart.has_key?(item_name)
-      item_hash[item_name][:count] += 1 
+    final_cart.each do |i|
+      item_name = item_hash.keys[0]
+      if i == item_name
+        item_hash[item_name][:count] += 1 
+      end
+      item_hash[item_name][:count] = 1 
+      final_cart << item_hash
     end
-    item_hash[item_name][:count] = 1 
-    final_cart << item_hash
-  end
   final_cart
 end
 
