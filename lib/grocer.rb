@@ -19,9 +19,9 @@ def consolidate_cart(cart)
   
   cart.each do |item_hash|
     final_cart.each do |i|
-      item_name = item_hash.keys[0]
-      if i == item_name
-        item_hash[item_name][:count] += 1 
+      item_name = item_hash[:item]
+      if i[:item] == item_name
+        item_hash[:item][:count] += 1 
       end
       item_hash[item_name][:count] = 1 
       final_cart << item_hash
