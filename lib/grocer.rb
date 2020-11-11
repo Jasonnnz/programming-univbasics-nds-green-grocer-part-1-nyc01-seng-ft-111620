@@ -22,10 +22,10 @@ def consolidate_cart(cart)
     final_cart.each do |i|
       item_name = item_hash[:item]
       if i[:item] == item_name
-        item_hash[:item][:count] += 1 
+        i[:item][:count] += 1 
       end
-      item_hash[item_name][:count] = 1 
-      final_cart << item_hash
+      i[:item][:count] = 1 
+      final_cart << i
     end
   final_cart
 end
