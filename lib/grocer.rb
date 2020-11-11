@@ -23,7 +23,7 @@ def consolidate_cart(cart)
     final_cart.each do |i|
       item_name = item_hash[:item]
       if i[:item] == item_name
-        i[:item][:count] += 1 
+        i[:count] += 1 
         found = true
       end
     end
