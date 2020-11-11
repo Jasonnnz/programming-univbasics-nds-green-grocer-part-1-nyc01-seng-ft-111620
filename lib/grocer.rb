@@ -22,7 +22,7 @@ def consolidate_cart(cart)
     if final_cart.include?(item_name)
       item_hash[:count] += 1 
     end
-    final_cart.push(item_hash[item_name])
+    final_cart.push(item_hash)
     item_hash[:count] = 1
   end
   final_cart
